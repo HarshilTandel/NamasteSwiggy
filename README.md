@@ -16,10 +16,9 @@ A beautiful & fully functional clone of Swiggy's food ordering app, built using 
 
 ## 📸 Screenshots
 
-| 🏠 Home | 🍴 Restaurant | 🛒 Cart | 🎁 Offers |
-|--------|---------------|---------|-----------|
-| ![Home](screenshots/home.png) | ![Restaurant](screenshots/restaurant.png) | ![Cart](screenshots/cart.png) | ![Offers](screenshots/offers.png) |
+ 🏠 Home 
 
+| ![Home](screenshots/home.png) |
 ---
 
 ## 🌟 Features
@@ -27,7 +26,7 @@ A beautiful & fully functional clone of Swiggy's food ordering app, built using 
 - 🔍 Search and filter restaurants  
 - 🍽️ Restaurant details page  
 - 🛒 Add to cart with Redux state management  
-- 🧾 Checkout summary  
+- 🧾 Checkout summary 
 - 🎁 Offers section  
 - 🧑 Sign In page (static)  
 - ❓ Help and Contact pages  
