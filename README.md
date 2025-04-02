@@ -18,7 +18,7 @@ A beautiful & fully functional clone of Swiggy's food ordering app, built using 
 
  🏠 Home 
 
-| ![Home](screenshots/home.png) |
+ ![Home](screenshots/home.png) 
 ---
 
 ## 🌟 Features
