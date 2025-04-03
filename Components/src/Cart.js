@@ -16,7 +16,7 @@ const Cart = () => {
   useEffect(() => {
     if (cartItems.length > 0) {
       toast.success("🛵 Your delicious order is on its way!", {
-        duration: 3000,
+        duration: 5000,
         style: {
           borderRadius: '8px',
           background: '#fff7ed',
