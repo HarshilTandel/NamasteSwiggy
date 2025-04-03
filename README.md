@@ -10,7 +10,7 @@ A beautiful & fully functional clone of Swiggy's food ordering app, built using 
 
 ## 🚀 Live Demo
 
-👉 [Swiggy Clone Live](https://namaste-swiggy-fawn.vercel.app/)
+👉 [Swiggy Clone Live](https://namastekhana.vercel.app/)
 
 ---
 
