@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem, clearCart } from "../utils/cartSlice";
 import { FaTrash, FaShoppingCart, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -10,6 +11,21 @@ const Cart = () => {
 
   // Calculate Total Price
   const totalPrice = cartItems.reduce((acc, item) => acc + (item.price || 0), 0) / 100;
+
+  // Toast on cart visit if items present
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      toast.success("🛵 Your delicious order is on its way!", {
+        duration: 3000,
+        style: {
+          borderRadius: '8px',
+          background: '#fff7ed',
+          color: '#ff6b00',
+          fontWeight: '600'
+        },
+      });
+    }
+  }, []);
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-xl mt-24">
@@ -71,10 +87,17 @@ const Cart = () => {
 
       {/* Cart Total */}
       {cartItems.length > 0 && (
-        <div className="mt-6 p-4 bg-gray-100 rounded-lg flex justify-between items-center">
-          <span className="text-lg font-semibold text-gray-800">Total:</span>
-          <span className="text-xl font-bold text-orange-500">₹{totalPrice.toFixed(2)}</span>
-        </div>
+        <>
+          <div className="mt-6 p-4 bg-gray-100 rounded-lg flex justify-between items-center">
+            <span className="text-lg font-semibold text-gray-800">Total:</span>
+            <span className="text-xl font-bold text-orange-500">₹{totalPrice.toFixed(2)}</span>
+          </div>
+
+          {/* Static success message */}
+          <div className="mt-4 text-center text-green-600 text-lg font-semibold">
+            ✅ Your food will be delivered shortly!
+          </div>
+        </>
       )}
 
       {/* Clear Cart Button */}
@@ -88,6 +111,9 @@ const Cart = () => {
           </button>
         </div>
       )}
+
+      {/* Toast Renderer */}
+      <Toaster position="bottom-center" reverseOrder={false} />
     </div>
   );
 };

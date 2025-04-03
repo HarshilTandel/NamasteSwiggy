@@ -42,7 +42,7 @@ const AppLayout = () => {
   return (
     <Provider store={appStore}>
       <Router>
-      <Routes>
+        <Routes>
   <Route path="/" element={<Layout />}>
     <Route index element={<Body />} />
     <Route path="cart" element={<Cart />} />
