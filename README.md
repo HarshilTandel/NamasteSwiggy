@@ -49,7 +49,7 @@ A beautiful & fully functional clone of Swiggy's food ordering app, built using 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/swiggy-clone.git
+git clone https://github.com/HarshilTandel/swiggy-clone.git
 
 # 2. Navigate to project directory
 cd swiggy-clone
